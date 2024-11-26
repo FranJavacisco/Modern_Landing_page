@@ -1,74 +1,95 @@
-// Inicialización de GSAP
+// Configuración de GSAP
 gsap.registerPlugin(ScrollTrigger);
 
-// Animaciones del Hero
-const heroTl = gsap.timeline({ defaults: { duration: 1, ease: 'power3.out' } });
-heroTl
-    .from('#heroTitle', { y: 50, opacity: 0 })
-    .from('#heroText', { y: 30, opacity: 0 }, '-=0.5')
-    .from('#heroButtons', { y: 30, opacity: 0 }, '-=0.3');
-
-// Animaciones de las tarjetas
-gsap.from('.interactive-card', {
-    scrollTrigger: {
-        trigger: '.interactive-card',
-        start: 'top bottom-=100',
-        toggleActions: 'play none none reverse'
-    },
-    y: 50,
-    opacity: 0,
-    duration: 0.8,
-    stagger: 0.2
-});
-
-// Animaciones de las estadísticas
-gsap.from('.stats-card', {
-    scrollTrigger: {
-        trigger: '.stats-card',
-        start: 'top bottom-=100',
-        toggleActions: 'play none none reverse'
-    },
-    y: 30,
-    opacity: 0,
-    duration: 0.8,
-    stagger: 0.2
-});
-
-// Manejo del menú móvil
-const menuButton = document.getElementById('menuButton');
-const closeMenu = document.getElementById('closeMenu');
-const mobileMenu = document.getElementById('mobileMenu');
-
-menuButton.addEventListener('click', () => {
-    mobileMenu.classList.add('active');
-});
-
-closeMenu.addEventListener('click', () => {
-    mobileMenu.classList.remove('active');
-});
-
-// Efecto parallax en la imagen hero
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const heroImage = document.querySelector('.hero-image');
-    if (heroImage) {
-        heroImage.style.transform = `translateY(${scrolled * 0.5}px)`;
+class AnimationController {
+    constructor() {
+        this.handleLoader(); // Añadimos el manejo del loader primero
+        this.initializeAnimations();
+        this.setupScrollAnimations();
+        this.setupHeaderScroll();
+        this.setupMobileMenu();
+        this.setupFormValidation();
+        this.setupScrollToTop();
     }
+
+    // Nuevo método para manejar el loader
+    handleLoader() {
+        const loader = document.getElementById('loader');
+        if (!loader) return;
+
+        const removeLoader = () => {
+            gsap.to(loader, {
+                opacity: 0,
+                duration: 0.5,
+                onComplete: () => {
+                    loader.style.display = 'none';
+                }
+            });
+        };
+
+        // Remover loader cuando la página esté completamente cargada
+        window.addEventListener('load', removeLoader);
+
+        // Fallback por si el evento load no se dispara
+        setTimeout(() => {
+            if (loader && loader.style.opacity !== '0') {
+                removeLoader();
+            }
+        }, 3000); // 3 segundos como máximo
+    }
+
+    // [Resto de tus métodos existentes...]
+
+    initializeAnimations() {
+        // Esperamos a que el loader se quite antes de iniciar las animaciones
+        const heroTl = gsap.timeline({
+            defaults: { ease: 'power3.out' },
+            delay: 0.5 // Pequeño delay para asegurar que el loader se ha ido
+        });
+
+        heroTl
+            .from('.hero-content h1', {
+                y: 100,
+                opacity: 0,
+                duration: 1.2
+            })
+            .from('.hero-content p', {
+                y: 50,
+                opacity: 0,
+                duration: 1
+            }, '-=0.8')
+            .from('.hero-content .btn-primary', {
+                y: 30,
+                opacity: 0,
+                duration: 0.8
+            }, '-=0.6')
+            .from('.hero-image', {
+                scale: 1.2,
+                opacity: 0,
+                duration: 1.5
+            }, '-=1');
+    }
+
+    // [Resto de tu código existente se mantiene igual...]
+}
+
+// Inicializar cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', () => {
+    new AnimationController();
 });
 
-// Eventos de las tarjetas interactivas
-document.querySelectorAll('.interactive-card').forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        gsap.to(card, {
-            scale: 1.05,
-            duration: 0.3
-        });
-    });
-
-    card.addEventListener('mouseleave', () => {
-        gsap.to(card, {
-            scale: 1,
-            duration: 0.3
-        });
-    });
+// Debug auxiliar
+window.addEventListener('load', () => {
+    console.log('Window loaded');
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM loaded');
+});
+
+// Verificar si GSAP está cargado
+if (window.gsap) {
+    console.log('GSAP loaded');
+} else {
+    console.error('GSAP not loaded');
+}
