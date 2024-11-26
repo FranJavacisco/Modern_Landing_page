@@ -38,7 +38,6 @@ class AnimationController {
         }, 3000); // 3 segundos como máximo
     }
 
-    // [Resto de tus métodos existentes...]
 
     initializeAnimations() {
         // Esperamos a que el loader se quite antes de iniciar las animaciones
