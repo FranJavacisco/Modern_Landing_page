@@ -4,6 +4,8 @@ Una landing page moderna y responsive para una agencia creativa digital, constru
 
 ![Gro Agency Preview](./assets/images/preview.png)
 
+https://franjavacisco.github.io/Modern_Landing_page/
+
 ## ✨ Características
 
 - 🎨 Diseño moderno y minimalista
@@ -132,7 +134,7 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE.m
 
 ## 👥 Autor
 
-- Tu Nombre - [Tu Perfil de GitHub](https://github.com/tu-usuario)
+- Francisco Lopez - [Tu Perfil de GitHub](https://github.com/FranJavacisco)
 
 ## 🙏 Agradecimientos
 
@@ -145,9 +147,9 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE.m
 
 Si tienes preguntas o sugerencias, no dudes en contactarme:
 
-- Email: tu@email.com
-- LinkedIn: [Tu Perfil](https://linkedin.com/in/tu-perfil)
-- Twitter: [@tuusuario](https://twitter.com/tuusuario)
+- Email: panchodev@email.com
+- LinkedIn: [Tu Perfil](https://www.linkedin.com/in/francisco-lopez-cl/)
+- Instagram: [@tuusuario](https://www.instagram.com/francisco.lopez2.0/)
 
 ---
-⭐️ From [tu-usuario](https://github.com/tu-usuario)
+⭐️ From [tu-usuario](https://github.com/FranJavacisco)
