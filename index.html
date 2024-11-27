@@ -7,7 +7,7 @@
     <meta name="description"
         content="Agencia creativa digital especializada en transformar visiones en experiencias memorables">
     <meta name="keywords" content="agencia digital, diseño web, branding, marketing digital">
-    <meta name="author" content="Gro Agency">
+    <meta name="author" content="Go Agency">
     <meta name="theme-color" content="#000000">
 
     <!-- Seguridad -->
@@ -15,7 +15,7 @@
     <meta http-equiv="Content-Security-Policy"
         content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' data: https:; font-src 'self' https: data:;">
 
-    <title>Gro Agency | Transformando Ideas en Realidades Digitales</title>
+    <title>Go Agency | Transformando Ideas en Realidades Digitales</title>
 
     <!-- Precargar recursos críticos -->
     <link rel="preload" href="./assets/css/styles.css" as="style">
@@ -44,46 +44,36 @@
     </a>
 
     <!-- Header -->
-    <header class="fixed w-full z-40 bg-black/90 backdrop-blur-sm transition-all duration-300" id="mainHeader">
+
+    <header class="header" id="mainHeader">
         <nav class="container mx-auto px-4 py-4" aria-label="Navegación principal">
             <div class="flex justify-between items-center">
                 <!-- Logo -->
-                <a href="/" class="logo relative z-50" aria-label="Inicio - Gro Agency">
-                    <span class="text-2xl font-bold gradient-text">°Gro</span>
+                <a href="/" class="logo" aria-label="Inicio - Go Agency">
+                    <span class="text-2xl font-bold gradient-text">°Go</span>
                 </a>
 
                 <!-- Navegación Desktop -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <nav class="nav-links" aria-label="Menú principal">
-                        <ul class="flex space-x-8">
-                            <li>
-                                <a href="#servicios" class="nav-link text-white hover:text-pink-500 transition-colors">
-                                    Servicios
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#proyectos" class="nav-link text-white hover:text-pink-500 transition-colors">
-                                    Proyectos
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#equipo" class="nav-link text-white hover:text-pink-500 transition-colors">
-                                    Equipo
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#contacto" class="btn-primary px-6 py-2 rounded-full text-white">
-                                    Contacto
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
+                <div class="nav-desktop hidden md:block">
+                    <ul class="flex space-x-8 items-center">
+                        <li>
+                            <a href="#servicios" class="nav-link">Servicios</a>
+                        </li>
+                        <li>
+                            <a href="#proyectos" class="nav-link">Proyectos</a>
+                        </li>
+                        <li>
+                            <a href="#equipo" class="nav-link">Equipo</a>
+                        </li>
+                        <li>
+                            <a href="#contacto" class="btn-primary">Contacto</a>
+                        </li>
+                    </ul>
                 </div>
 
-                <!-- Botón Menú Móvil -->
-                <button class="menu-toggle md:hidden relative z-50" id="menuButton" aria-label="Abrir menú"
-                    aria-expanded="false" aria-controls="mobileMenu">
-                    <span class="sr-only">Menú</span>
+                <!-- Botón Menú Móvil Mejorado -->
+                <button class="menu-toggle md:hidden" id="menuButton" aria-label="Menú" aria-expanded="false"
+                    aria-controls="mobileMenu">
                     <div class="menu-icon">
                         <span></span>
                         <span></span>
@@ -91,41 +81,19 @@
                     </div>
                 </button>
             </div>
-
-            <!-- Menú Móvil -->
-            <div id="mobileMenu"
-                class="mobile-menu fixed inset-0 bg-black/95 backdrop-blur-md -translate-x-full transition-transform duration-300"
-                aria-hidden="true" role="dialog" aria-modal="true">
-                <nav class="h-full flex flex-col justify-center items-center text-center">
-                    <ul class="space-y-6">
-                        <li>
-                            <a href="#servicios"
-                                class="text-3xl font-medium text-white hover:text-pink-500 transition-colors">
-                                Servicios
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#proyectos"
-                                class="text-3xl font-medium text-white hover:text-pink-500 transition-colors">
-                                Proyectos
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#equipo"
-                                class="text-3xl font-medium text-white hover:text-pink-500 transition-colors">
-                                Equipo
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#contacto"
-                                class="text-3xl font-medium text-white hover:text-pink-500 transition-colors">
-                                Contacto
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
         </nav>
+
+        <!-- Menú Móvil Mejorado -->
+        <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+            <nav class="mobile-nav">
+                <ul class="mobile-links">
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#equipo">Equipo</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <!-- Contenido Principal -->
@@ -137,7 +105,7 @@
 
             <div class="hero-image-wrapper absolute inset-0 md:right-0 md:left-auto md:w-1/2">
                 <picture>
-                    <source srcset="./assets/images/hero-bg.webp" type="image/webp">
+                    <source srcset="/assets/images/Hero.png" type="">
                     <source srcset="/assets/images/hero-bg.jpg" type="image/jpeg">
                     <img src="./assets/images/hero.png" alt="Imagen de fondo"
                         class="hero-image w-full h-full object-cover opacity-50 md:opacity-80" width="1920"
@@ -303,6 +271,7 @@
         </section>
 
         <!-- Sección Proyectos -->
+
         <section id="proyectos" class="section-padding bg-gradient-to-br from-pink-500/10 to-purple-600/10"
             aria-labelledby="proyectos-title">
             <div class="container mx-auto px-4">
@@ -319,16 +288,17 @@
                     <!-- Proyecto 1 -->
                     <article class="project-card group">
                         <div class="relative overflow-hidden rounded-2xl aspect-video">
-                            <img src="assets/images/proyecto1.jpg" alt="Rediseño marca Ecolife"
+                            <img src="assets/images/proyect/proyecto1.jpg" alt="E-commerce Sportify"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 loading="lazy" width="600" height="400">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <div class="absolute bottom-0 left-0 right-0 p-6">
-                                    <h3 class="text-xl font-bold mb-2">Ecolife Rebrand</h3>
-                                    <p class="text-gray-300">Branding, Diseño Web</p>
+                                    <h3 class="text-xl font-bold mb-2">Sportify E-commerce</h3>
+                                    <p class="text-gray-300">Desarrollo Web, E-commerce</p>
                                     <a href="#" class="inline-flex items-center mt-4 text-pink-500 hover:text-pink-400">
-                                        Ver Proyecto
+                                        Demo
+
                                         <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -342,16 +312,17 @@
                     <!-- Proyecto 2 -->
                     <article class="project-card group">
                         <div class="relative overflow-hidden rounded-2xl aspect-video">
-                            <img src="assets/images/proyecto2.jpg" alt="Campaña digital TechFuture"
+                            <img src="assets/images/proyect/proyecto2.png" alt="E-commerce Sportify"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 loading="lazy" width="600" height="400">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <div class="absolute bottom-0 left-0 right-0 p-6">
-                                    <h3 class="text-xl font-bold mb-2">TechFuture Campaign</h3>
-                                    <p class="text-gray-300">Marketing Digital, Social Media</p>
+                                    <h3 class="text-xl font-bold mb-2">Sportify E-commerce</h3>
+                                    <p class="text-gray-300">Desarrollo Web, E-commerce</p>
                                     <a href="#" class="inline-flex items-center mt-4 text-pink-500 hover:text-pink-400">
-                                        Ver Proyecto
+                                        Demo
+
                                         <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -362,10 +333,11 @@
                         </div>
                     </article>
 
+
                     <!-- Proyecto 3 -->
                     <article class="project-card group">
                         <div class="relative overflow-hidden rounded-2xl aspect-video">
-                            <img src="assets/images/proyecto3.jpg" alt="E-commerce Sportify"
+                            <img src="assets/images/proyect/proyecto3.jpg" alt="E-commerce Sportify"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 loading="lazy" width="600" height="400">
                             <div
@@ -374,7 +346,8 @@
                                     <h3 class="text-xl font-bold mb-2">Sportify E-commerce</h3>
                                     <p class="text-gray-300">Desarrollo Web, E-commerce</p>
                                     <a href="#" class="inline-flex items-center mt-4 text-pink-500 hover:text-pink-400">
-                                        Ver Proyecto
+                                        Demo
+
                                         <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -384,6 +357,79 @@
                             </div>
                         </div>
                     </article>
+
+                    <!-- Proyecto 4 -->
+                    <article class="project-card group">
+                        <div class="relative overflow-hidden rounded-2xl aspect-video">
+                            <img src="assets/images/proyect/proyecto4.jpg" alt="E-commerce Sportify"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                loading="lazy" width="600" height="400">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="absolute bottom-0 left-0 right-0 p-6">
+                                    <h3 class="text-xl font-bold mb-2">Sportify E-commerce</h3>
+                                    <p class="text-gray-300">Desarrollo Web, E-commerce</p>
+                                    <a href="#" class="inline-flex items-center mt-4 text-pink-500 hover:text-pink-400">
+                                        Demo
+
+                                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 5 -->
+                    <article class="project-card group">
+                        <div class="relative overflow-hidden rounded-2xl aspect-video">
+                            <img src="assets/images/proyect/proyecto5.jpg" alt="E-commerce Sportify"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                loading="lazy" width="600" height="400">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="absolute bottom-0 left-0 right-0 p-6">
+                                    <h3 class="text-xl font-bold mb-2">Sportify E-commerce</h3>
+                                    <p class="text-gray-300">Desarrollo Web, E-commerce</p>
+                                    <a href="#" class="inline-flex items-center mt-4 text-pink-500 hover:text-pink-400">
+                                        Demo
+
+                                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 6 -->
+                    <article class="project-card group">
+                        <div class="relative overflow-hidden rounded-2xl aspect-video">
+                            <img src="assets/images/proyect/proyecto6.jpg" alt="E-commerce Sportify"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                loading="lazy" width="600" height="400">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="absolute bottom-0 left-0 right-0 p-6">
+                                    <h3 class="text-xl font-bold mb-2">Sportify E-commerce</h3>
+                                    <p class="text-gray-300">Desarrollo Web, E-commerce</p>
+                                    <a href="#" class="inline-flex items-center mt-4 text-pink-500 hover:text-pink-400">
+                                        Demo
+
+                                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
                 </div>
 
                 <!-- Botón Ver Más Proyectos -->
@@ -612,7 +658,7 @@
                 <!-- Columna 1 - Información de la empresa -->
                 <div class="space-y-6">
                     <div class="flex items-center">
-                        <a href="/" class="text-2xl font-bold gradient-text" aria-label="Gro Agency">°Gro</a>
+                        <a href="/" class="text-2xl font-bold gradient-text" aria-label="Gro Agency">°Go</a>
                     </div>
                     <p class="text-gray-400 max-w-xs">
                         Transformando visiones en realidades digitales desde 2010. Especialistas en diseño, desarrollo y
@@ -697,7 +743,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
-                            <span>Madrid, España<br>Calle Principal 123, 28001</span>
+                            <span>Santiago, Chile<br>Calle Principal 123, 28001</span>
                         </li>
                         <li class="flex items-center">
                             <svg class="w-6 h-6 mr-2 text-pink-500" fill="none" stroke="currentColor"
@@ -725,7 +771,7 @@
                 <div class="flex flex-col md:flex-row justify-between items-center">
                     <!-- Copyright -->
                     <p class="text-gray-400 text-sm text-center md:text-left">
-                        © <span id="currentYear">2024</span> °Gro Agency. Todos los derechos reservados.
+                        © <span id="currentYear">2024</span> °Go Agency. Todos los derechos reservados.
                     </p>
 
                     <!-- Enlaces Legales -->

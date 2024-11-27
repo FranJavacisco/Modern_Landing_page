@@ -38,6 +38,8 @@ class AnimationController {
         }, 3000); // 3 segundos como máximo
     }
 
+    
+
 
     initializeAnimations() {
         // Esperamos a que el loader se quite antes de iniciar las animaciones
@@ -69,7 +71,6 @@ class AnimationController {
             }, '-=1');
     }
 
-    // [Resto de tu código existente se mantiene igual...]
 }
 
 // Inicializar cuando el DOM esté listo
